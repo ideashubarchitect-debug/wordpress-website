@@ -1,0 +1,185 @@
+/*
+Theme Name: SaaS Reminder
+Description: A minimal block theme for a daily task reminder SaaS app
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: saas-reminder
+*/
+
+/* Skip to content link */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	z-index: 999999;
+	padding: 8px 16px;
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+.skip-link:focus {
+	left: 6px;
+	top: 7px;
+}
+
+/* Base styles */
+body {
+	font-family: var(--wp--preset--font-family--system);
+	font-size: var(--wp--preset--font-size--medium);
+	line-height: 1.6;
+	color: var(--wp--preset--color--text);
+	background-color: var(--wp--preset--color--dark);
+}
+
+/* Responsive headings */
+h1 {
+	font-size: clamp(2rem, 5vw, 4rem);
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0 0 1rem 0;
+}
+
+h2 {
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0 0 1rem 0;
+}
+
+h3 {
+	font-size: clamp(1.25rem, 3vw, 1.75rem);
+	font-weight: 600;
+	line-height: 1.3;
+	margin: 0 0 0.75rem 0;
+}
+
+/* Button styles */
+.wp-block-button__link {
+	display: inline-block;
+	padding: 12px 24px;
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+	text-decoration: none;
+	border-radius: 6px;
+	font-weight: 600;
+	transition: all 0.2s ease;
+	border: none;
+	cursor: pointer;
+}
+
+.wp-block-button__link:hover {
+	background-color: var(--wp--preset--color--text);
+	color: var(--wp--preset--color--dark);
+	transform: translateY(-1px);
+}
+
+.wp-block-button__link:focus {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 2px;
+}
+
+/* Navigation styles */
+.wp-block-navigation {
+	background-color: var(--wp--preset--color--surface);
+	padding: 1rem 0;
+}
+
+.wp-block-navigation__responsive-container-open {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+	border: none;
+	border-radius: 4px;
+	padding: 8px 12px;
+}
+
+.wp-block-navigation__responsive-container-open:hover {
+	background-color: var(--wp--preset--color--text);
+}
+
+.wp-block-navigation a {
+	color: var(--wp--preset--color--text);
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	display: block;
+	transition: color 0.2s ease;
+}
+
+.wp-block-navigation a:hover,
+.wp-block-navigation a:focus {
+	color: var(--wp--preset--color--primary);
+}
+
+/* Card styles */
+.wp-block-group.is-style-card {
+	background-color: var(--wp--preset--color--surface);
+	border-radius: 8px;
+	padding: 2rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.wp-block-group.is-style-form {
+	background-color: var(--wp--preset--color--surface);
+	border-radius: 8px;
+	padding: 2rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid var(--wp--preset--color--text);
+	border-radius: 4px;
+	background-color: var(--wp--preset--color--dark);
+	color: var(--wp--preset--color--text);
+	font-family: inherit;
+	font-size: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 2px;
+	border-color: var(--wp--preset--color--primary);
+}
+
+/* Footer styles */
+footer {
+	background-color: var(--wp--preset--color--surface);
+	padding: 2rem 0;
+	margin-top: 4rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.wp-block-columns {
+		flex-direction: column;
+	}
+	
+	.wp-block-group.is-style-card {
+		padding: 1.5rem;
+	}
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	.wp-block-button__link {
+		border: 2px solid currentColor;
+	}
+}
