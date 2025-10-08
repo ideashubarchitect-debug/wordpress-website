@@ -80,7 +80,7 @@ function saas_reminder_set_front_page() {
         $pages = array(
             'home' => array(
                 'title' => 'Home',
-                'content' => '<!-- wp:pattern {"slug":"saas-reminder/hero"} /-->\n\n<!-- wp:pattern {"slug":"saas-reminder/features"} /-->\n\n<!-- wp:pattern {"slug":"saas-reminder/cta"} /-->'
+                'content' => ''
             ),
             'features' => array(
                 'title' => 'Features',
