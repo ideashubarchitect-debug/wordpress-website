@@ -30,6 +30,21 @@
 					"color": "#FFFFFF",
 					"name": "White",
 					"slug": "white"
+				},
+				{
+					"color": "#F8F9FF",
+					"name": "Light Background",
+					"slug": "light-bg"
+				},
+				{
+					"color": "#10B981",
+					"name": "Success",
+					"slug": "success"
+				},
+				{
+					"color": "#6B7280",
+					"name": "Muted",
+					"slug": "muted"
 				}
 			]
 		},
