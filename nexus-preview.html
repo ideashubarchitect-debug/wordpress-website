@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Theme Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Import the theme styles */
+        @import url('wp-content/themes/nexus/style.css');
+        
+        /* Additional preview styles */
+        .preview-notice {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #4f46e5;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            z-index: 9999;
+            font-weight: 600;
+        }
+        
+        .preview-notice a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        body {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-notice">
+        🎨 <strong>Nexus Theme Preview</strong> - This is a preview of the Nexus WordPress theme. 
+        <a href="wp-content/themes/nexus/">View theme files</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-fade-in-up">Welcome to Nexus</h1>
+                <p class="animate-fade-in-up">A stunning, modern WordPress theme with beautiful gradients and smooth animations.</p>
+                <div class="hero-buttons animate-fade-in-up">
+                    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+                    <a href="#features" class="btn btn-secondary btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="animate-fade-in-up">Why Choose Nexus?</h2>
+                <p class="animate-fade-in-up">We combine cutting-edge design with powerful functionality to create websites that truly stand out</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="feature-card animate-fade-in-up">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Beautiful Design</h3>
+                    <p>Stunning, modern designs that captivate your audience and reflect your brand's unique personality</p>
+                </div>
+                
+                <div class="feature-card animate-fade-in-up">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Optimized for speed and performance to ensure your visitors have the best possible experience</p>
+                </div>
+                
+                <div class="feature-card animate-fade-in-up">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Ready</h3>
+                    <p>Fully responsive designs that look perfect on every device, from mobile phones to desktop computers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="animate-fade-in-up">What Our Clients Say</h2>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="testimonial-card animate-fade-in-up">
+                    <p>"Nexus transformed our online presence completely. The design is absolutely stunning and the results speak for themselves."</p>
+                    <div class="testimonial-author">— Sarah Johnson, CEO</div>
+                </div>
+                
+                <div class="testimonial-card animate-fade-in-up">
+                    <p>"The team at Nexus exceeded all our expectations. Professional, creative, and incredibly talented."</p>
+                    <div class="testimonial-author">— Michael Chen, Founder</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="animate-fade-in-up">Ready to Get Started?</h2>
+                <p class="animate-fade-in-up">Let's create something amazing together. Contact us today and let's bring your vision to life.</p>
+                <a href="#" class="btn btn-primary btn-lg animate-fade-in-up">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nexus Theme</h3>
+                    <p>A stunning, modern WordPress theme with beautiful gradients and smooth animations.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#">Home</a></p>
+                    <p><a href="#">About</a></p>
+                    <p><a href="#">Portfolio</a></p>
+                    <p><a href="#">Contact</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><strong>Email:</strong><br><a href="mailto:info@example.com">info@example.com</a></p>
+                    <p><strong>Phone:</strong><br><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nexus Theme. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation script for preview
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-fade-in-up');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
